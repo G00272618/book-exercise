@@ -69,5 +69,12 @@ class Book
         return;
     }
     
-    
+    // Provide formatted print utility for all field variables.
+    public void printDetails()
+    {
+        System.out.println("Author:\t\t" + author);
+        System.out.println("Title:\t\t" + title);
+        System.out.println("Publisher:\t" + publisher);
+        return;
+    }
 }
