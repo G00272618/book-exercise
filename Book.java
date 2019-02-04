@@ -12,7 +12,9 @@ class Book
     private String author;
     private String title;
     // Add new field variable.
-    private String publisher;
+    private boolean courseText;
+    // Add new field variable. (2)
+    private
 
     /**
      * Set the author and title fields when this object
@@ -20,12 +22,13 @@ class Book
      */
     
     // Add new parameter to correspond with new field variable within the constructor method.
-    public Book(String bookAuthor, String bookTitle, String bookPublisher)
+    // Add new parameter to correspond with new field variable within the constructor method. (2)
+    public Book(String bookAuthor, String bookTitle, boolean bookIsCourseText)
     {
         author = bookAuthor;
         title = bookTitle;
         // Equate new field variable to the new parameter.
-        publisher = bookPublisher;
+        courseText = bookIsCourseText;
     }
 
     // Add the methods here ...
@@ -42,10 +45,10 @@ class Book
         return title;
     }
     
-    // Provide access to the publisher.
-    public String getPublisher()
+    // Provide access to the isCourseText variable.
+    public boolean isCourseText()
     {
-        return publisher;
+        return courseText;
     }
     
     // Provide print utility for the author.
@@ -62,10 +65,14 @@ class Book
         return;
     }
     
-    // Provide print utility for the publisher.
+    // Provide print utility for the isCourseText variable.
     public void printPublisher()
     {
-        System.out.println("Publisher: " + publisher);
+        if (courseText) {
+            System.out.println("Course text?\t*YES*");
+        } else {
+            System.out.println("Course text?\t*NO*");
+        }
         return;
     }
     
@@ -74,7 +81,11 @@ class Book
     {
         System.out.println("Author:\t\t" + author);
         System.out.println("Title:\t\t" + title);
-        System.out.println("Publisher:\t" + publisher);
+        if (courseText) {
+            System.out.println("Course text?\t*YES*");
+        } else {
+            System.out.println("Course text?\t*NO*");
+        }
         return;
     }
 }
