@@ -6,6 +6,8 @@
  * @author Mark Leotti
  * @version 2/4/2019
  */
+
+import java.util.Scanner;
 class Book
 {
      // The fields.
@@ -15,6 +17,8 @@ class Book
     private boolean courseText;
     // Add new field variable. (2)
     private int pages;
+    // Add new field variable. (3)
+    private boolean borrowed;
 
     /**
      * Set the author and title fields when this object
@@ -45,7 +49,7 @@ class Book
         return title;
     }
     
-    // Provide access to the isCourseText variable.
+    // Provide access to the isCourseText boolean.
     public boolean isCourseText()
     {
         return courseText;
@@ -55,6 +59,23 @@ class Book
     public int getPages()
     {
         return pages;
+    }
+    
+    // Provide access to the borrowed boolean.
+    public boolean isBorrowed()
+    {
+        return borrowed;
+    }
+    
+    // Provide mutator access to the borrowed boolean.
+    public boolean getBorrowed()
+    {
+        if (!borrowed) {
+            borrowed = true;
+        } else if (borrowed) {
+            borrowed = false;
+        }
+        return;
     }
     
     // Provide print utility for the author.
@@ -71,7 +92,7 @@ class Book
         return;
     }
     
-    // Provide print utility for the isCourseText variable.
+    // Provide print utility for the isCourseText boolean.
     public void printPublisher()
     {
         if (courseText) {
@@ -99,6 +120,11 @@ class Book
             System.out.println("Course text?\t*NO*");
         }
         System.out.println("Pages:\t\t" + pages);
+        if (borrowed) {
+            System.out.println("Borrowed Status:\t*IN*");
+        } else {
+            System.out.println("Borrowed Status:\t*OUT*");
+        }
         return;
     }
 }
