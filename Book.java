@@ -82,6 +82,12 @@ class Book
         return;
     }
     
+    // Provide print utility for the number of pages.
+    public void printPages()
+    {
+        System.out.println("Pages:\t\t" + pages);
+    }
+    
     // Provide formatted print utility for all field variables.
     public void printDetails()
     {
@@ -92,6 +98,7 @@ class Book
         } else {
             System.out.println("Course text?\t*NO*");
         }
+        System.out.println("Pages:\t\t" + pages);
         return;
     }
 }
