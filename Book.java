@@ -11,42 +11,61 @@ class Book
      // The fields.
     private String author;
     private String title;
+    // Add new field variable.
+    private String publisher;
 
     /**
      * Set the author and title fields when this object
      * is constructed.
      */
-    public Book(String bookAuthor, String bookTitle)
+    
+    // Add new parameter to correspond with new field variable within the constructor method.
+    public Book(String bookAuthor, String bookTitle, String bookPublisher)
     {
         author = bookAuthor;
         title = bookTitle;
+        // Equate new field variable to the new parameter.
+        publisher = bookPublisher;
     }
 
     // Add the methods here ...
     
-    // provide access to the author
+    // Provide access to the author.
     public String getAuthor()
     { 
         return author;
     }
     
-    //provide access to title
+    // Provide access to title.
     public String getTitle()
     {
         return title;
     }
     
-    //provide print utility for the author
+    // Provide access to the publisher.
+    public String getPublisher()
+    {
+        return publisher;
+    }
+    
+    // Provide print utility for the author.
     public void printAuthor()
     {
         System.out.println("Author: " + author);
         return;
     }
     
-    //provide print utility for the title
+    // Provide print utility for the title.
     public void printTitle()
     {
         System.out.println("Title: " + title);
+        return;
+    }
+    
+    // Provide print utility for the publisher.
+    public void printPublisher()
+    {
+        System.out.println("Publisher: " + publisher);
         return;
     }
     
