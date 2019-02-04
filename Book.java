@@ -14,21 +14,21 @@ class Book
     // Add new field variable.
     private boolean courseText;
     // Add new field variable. (2)
-    private
+    private int pages;
 
     /**
      * Set the author and title fields when this object
      * is constructed.
      */
     
-    // Add new parameter to correspond with new field variable within the constructor method.
     // Add new parameter to correspond with new field variable within the constructor method. (2)
-    public Book(String bookAuthor, String bookTitle, boolean bookIsCourseText)
+    public Book(String bookAuthor, String bookTitle, int bookPages, boolean bookIsCourseText)
     {
         author = bookAuthor;
         title = bookTitle;
-        // Equate new field variable to the new parameter.
+        // Equate new field variables to the new parameters.
         courseText = bookIsCourseText;
+        pages = bookPages;
     }
 
     // Add the methods here ...
@@ -49,6 +49,12 @@ class Book
     public boolean isCourseText()
     {
         return courseText;
+    }
+    
+    // Provide access to the number of pages.
+    public int getPages()
+    {
+        return pages;
     }
     
     // Provide print utility for the author.
